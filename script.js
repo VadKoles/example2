@@ -1,21 +1,25 @@
 let button = document.querySelector('.btn');
 let login = document.querySelector('.login');
-
+let icon = document.querySelector('.menu_small_icon')
+let stick = document.querySelector('.stick')
 let condition = true
 let start = 0
 let end = 0
 function forwards(){
+    icon.style.marginLeft = '0px'
     anime({
-        targets: '.menu-small',
-        translateX: ['-100%', '0'],
+        targets: '.naver',
+        translateX: ['-100vw', '0'],
         easing:'easeInOutQuad',
         direction: 'alternate',
         duration: 1000,
         loop: false
     })
+    
     anime({
         targets: '.menu_small_icon',
         rotate: 90,
+   
         easing: 'easeInOutQuad',
         diraction: 'alternate',
         duration: 1000,
@@ -33,21 +37,14 @@ function forwards(){
 }
 function backwards(){
     anime({
-        targets: '.menu-small',
-        translateX: ['0', '-100%'],
+        targets: '.naver',
+        translateX: ['0', '-100vw'],
         easing:'easeInOutQuad',
         direction: 'alternate',
         duration: 1000,
         loop: false
     })
-    anime({
-        targets: '.menu-small-item',
-        translateX: ['0', '-100%'],
-        easing:'easeInOutQuad',
-        direction: 'alternate',
-        duration: 1000,
-        loop: false
-    })
+    
     anime({
         targets: '.menu_small_icon',
         rotate: 180,
@@ -97,3 +94,22 @@ $('header').on('touchend', function(event){
     }
 })
 button.addEventListener('click', handle);
+let links = document.querySelectorAll('.scroll')
+let targetID
+links.forEach(function(element){
+    element.addEventListener('click', function(event){
+        event.preventDefault()
+        targetID = element.getAttribute('href')
+        document.querySelector(targetID).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        })
+    })
+})
+$(document).ready(function () {
+    $('.slider').bxSlider({
+        pagerCustom: '.slider-nav',
+        infiniteLoop: false,
+        hideControlOnEnd: true,
+    });
+});
