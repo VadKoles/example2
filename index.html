@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/logo.png">
+    <title>IMAX</title>
+    <script src="anime.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+</head>
+<body>
+    <header>
+        
+        <nav>
+            <div class="menu_small_icon">
+                <div class="stick"></div>
+                <div class="stick"></div>
+                <div class="stick"></div>
+            </div>
+            <div class="naver">
+                <a href="#afisha" class="navers menu_item scroll">Афиша</a>
+                <a href="" class="navers menu_item scroll">О кинотеатре</a>
+                <a href="#contact" class="navers menu_item scroll">Контакты</a>
+            </div>
+            <img src="images/logo.png" class="logo">
+            <div class="menu">
+                <a href="#afisha" class="navers menu_item scroll">Афиша</a>
+                <a href="" class="navers menu_item scroll">О кинотеатре</a>
+                <a href="#contact" class="navers menu_item scroll">Контакты</a>
+            </div>
+
+            <img src="images/calendar.png" class="calendar">
+        
+            
+        </nav>
+        
+            
+            
+    </header>
+    <main>
+        <div class="slider">
+            <div><img class="poster" src="images/pantera.jpg"></div>
+            <div><img class="poster" src="images/avatar.jpg"></div>
+            <div><img class="poster" src="images/poker.jpg"></div>
+        </div>
+        <article>
+            <h1 class="big36" id="afisha">Афиша кино на завтра</h1>
+            <div class="row">
+                <div class="container">
+                    <img class="film" src="images/belka.png">
+                    <div class="times">
+                        <input type="button" value="11:10" class="time">
+                        <input type="button" value="14:30" class="time">
+                        <input type="button" value="17:50" class="time">
+                        <input type="button" value="19:20" class="time">
+                    </div>
+                </div>
+                <div class="container">
+                    <img class="film" src="images/magic.png">
+                    <div class="times">
+                        <input type="button" value="12:20" class="time">
+                        <input type="button" value="15:45" class="time">
+                        <input type="button" value="19:00" class="time">
+                        <input type="button" value="21:20" class="time">
+                    </div>
+                </div>
+            </div>
+            
+        </article>
+        <article class="sub">
+            
+            <form class="subscribe">
+                <div class="center">
+                    <h1>Подпишись и будешь в курсе всех премьер!</h1>
+                </div>
+                
+                <input type="text" class="form-sub login" name="login" placeholder="Введите логин">
+                <input type="password" class="form-sub" name="password" placeholder="Введите пароль">
+                <button type="submit" class="buy btn" name="button">Подписаться</button>
+                
+            </form>
+        </article>
+        
+    </main>
+    <footer>
+        <p class="pF" id="contact">Телефон 88005553535</p>
+        <p class="pF">Адрес: Пионерская 2б</p>
+        <p class="pF">@2022</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
